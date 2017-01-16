@@ -66,9 +66,10 @@ SI7021 si7021;
 #define CHILD_ID_HUM 0
 #define CHILD_ID_TEMP 1
 
-const unsigned long SLEEP_TIME = 1800000UL; // Sleep time between reads (in milliseconds), 30min
 #if defined MY_DEBUG
-SLEEP_TIME = 15000UL; // If debug, TX every 15s
+const unsigned long SLEEP_TIME = 15000UL; // If debug, TX every 15s
+#else
+const unsigned long SLEEP_TIME = 1800000UL; // Sleep time between reads (in milliseconds), 30min
 #endif
 float lastTemp, lastHum;
 boolean metric = true;
