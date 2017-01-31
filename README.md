@@ -18,7 +18,7 @@ Ordering
 Gerber files are included so you can order these PCB at your favorite PCB fab house and solder the few components yourself.
 For an easy ordering process you can directly order these PCB without having to do anything else:
 - [PCBs.io](https://PCBs.io/share/8VvDe) 4 for $6.78, black 1.2mm PCB, ENIG finish.
-- [DirtyPCBs](http://dirtypcbs.com/store/designer/details/10880/1157/mysi2cnode-zip) ~10 for $12.95, multiple colors and PCB thickness, HASL finish.
+- [DirtyPCBs](http://dirtypcbs.com/store/designer/details/10880/1157/mysi2cnode-zip) ~10 for $15.95, multiple colors and PCB thickness, HASL finish.
 
 
 Assembly

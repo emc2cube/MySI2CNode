@@ -81,6 +81,9 @@ int BATTERY_SENSE_PIN = A0;  // select the input pin for the battery sense point
 int oldBatteryPcnt = 0;
 #endif // end BATTERY_MONITORING
 
+#define SN "Temperature Humidity node"  // Name of the sketch
+#define SV "2.1.1"                      // Version (2.0 : use MySensors 2.0)
+
 void setup() {
   if (!si7021.initialize()) {
     Serial.println("Can't find SI7021 sensor!");
@@ -92,7 +95,7 @@ void setup() {
 #else
   analogReference(INTERNAL);
 #endif
-  metric = getConfig().isMetric;
+  metric = getControllerConfig().isMetric;  // was getConfig().isMetric; before MySensors v2.1.1
   Serial.println("Mobile Temperature and Humidity sensor node ready.");
 }
 
@@ -100,7 +103,7 @@ void presentation()
 {
   // Send the Sketch Version Information to the Gateway
   sleep(MESSAGEWAIT);
-  sendSketchInfo("Temperature Humidity node", "2.0");
+  sendSketchInfo(SN, SV);
 
   // Register all sensors to gw (they will be created as child devices)
   String humReg = Location + " Hum";
