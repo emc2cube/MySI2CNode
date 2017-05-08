@@ -82,7 +82,7 @@ int oldBatteryPcnt = 0;
 #endif // end BATTERY_MONITORING
 
 #define SN "Temperature Humidity node"  // Name of the sketch
-#define SV "2.1.1"                      // Version (2.0 : use MySensors 2.0)
+#define SV "2.1.1"                      // Version (2.x : use MySensors 2.x)
 
 void setup() {
   if (!si7021.initialize()) {
